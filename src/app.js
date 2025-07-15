@@ -26,10 +26,12 @@ app.use(express.static("public")); // Serve static files from the 'public' direc
 
 //routes import
 import userRouter from "./routes/user.routes.js";
+import tweetRouter from "./routes/tweet.route.js"
 
 //routes declaration
 //http://localhost:8000/api/v1/users/register
 //http://localhost:8000/api/v1/users/login
 app.use("/api/v1/users", userRouter);
+app.use("/api/v1/tweets", tweetRouter)
 
 export default app;

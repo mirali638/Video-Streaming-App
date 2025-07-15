@@ -66,7 +66,7 @@ const updateTweet = asyncHandler(async (req, res) => {
     await tweet.save();
 
     //send the updated tweet.
-    return res.status(200).json(new ApiResponse(200,{tweets},"tweet update successfully"));
+    return res.status(200).json(new ApiResponse(200,{tweet},"tweet update successfully"));
 })
 
 const deleteTweet = asyncHandler(async (req, res) => {
@@ -90,7 +90,7 @@ const deleteTweet = asyncHandler(async (req, res) => {
     await tweet.deleteOne();
 
     //Send a success message.
-    return res.status(200).json(new ApiResponse(200,{tweets},"tweets deleted successfully"));
+    return res.status(200).json(new ApiResponse(200,{},"tweets deleted successfully"));
 })
 
 export {
